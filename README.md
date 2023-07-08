@@ -6,6 +6,7 @@ Features:
 - Users: Users can view & search personal information for other users in list view and grid view.
 - Blogs: All blog posts are displayed in cards view, user can browse through them.
 - Responsive design: The application is designed to work seamlessly on various devices, including desktops, tablets and mobile phones.
+- Readmore: Readmore button in blog post will be visible if content lenght is more than 100 charactres.
 
 Login information:
 Email: Sincere@april.biz

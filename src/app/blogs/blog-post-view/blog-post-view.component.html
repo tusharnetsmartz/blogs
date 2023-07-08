@@ -14,11 +14,11 @@
               <div class="inn-blog-section-wrap">
                 <div class="post-body fix-height" [ngClass]="isExpanded ? 'max-height-wrap': ' '">
                   <p>
-                    {{ blogPost[i].body.length < 300 ? blogPost[i].body : isExpanded ? blogPost[i].body :
-                      blogPost[i].body | slice: 0:300 }} </p>
+                    {{ blogPost[i].body.length < 100 ? blogPost[i].body : isExpanded ? blogPost[i].body :
+                      blogPost[i].body | slice: 0:100 }} </p>
                 </div>
                 <div class="mt-auto mb-2 ">
-                  <a class="pointer" data-bs-toggle="collapse" *ngIf="blogPost[i].body.length >= 300"
+                  <a class="pointer" data-bs-toggle="collapse" *ngIf="blogPost[i].body.length >= 100"
                     (click)="togglePost(post)">{{ post.isExpanded ? 'Read less' : 'Read more' }}</a>
                 </div>
                 <div class="d-flex mt-4 text-container">

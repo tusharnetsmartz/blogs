@@ -33,7 +33,10 @@
         <mat-icon>notifications</mat-icon>
       </button>
       <mat-menu #notificationMenu="matMenu">
-        <button mat-menu-item class="pointer-cursor" *ngFor="let blog of this.blogPost">{{blog}}</button>
+        <div *ngFor="let blog of this.blogPost">
+          <button mat-menu-item class="pointer-cursor p-2">{{blog}}</button>
+          <mat-divider></mat-divider>  
+        </div>
       </mat-menu>
       <div class="dropdown">
         <button type="button" class="dropdown-toggle" id="dropdownMenuButton" aria-label="Toggle sidenav"
