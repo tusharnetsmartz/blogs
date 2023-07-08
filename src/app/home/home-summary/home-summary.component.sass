@@ -1,0 +1,39 @@
+@import "../../../styles"
+    
+.card
+    border: 0
+    background-color: $white-color
+    border-radius: 8px
+
+    &-img-top
+        width: 50%
+        height: 110px
+        object-fit: cover
+
+.total-text
+    font-family: Proxima Nova
+    font-size: 40px
+    font-weight: 700
+    line-height: 49px
+    letter-spacing: 0em
+    text-align: left
+    color: $black-color
+    margin-bottom: 0
+
+.description-text
+    font-family: Proxima Nova
+    font-size: 20px
+    font-weight: 700
+    line-height: 24px
+    letter-spacing: 0em
+    text-align: left
+    color: $font-color
+
+.icon
+    vertical-align: top
+    text-align: right
+    height: 50px
+
+@media only screen and (min-width: 280px) and (max-width: 992px)
+    .card-container
+        width: 50% !important

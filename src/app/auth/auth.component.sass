@@ -1,0 +1,42 @@
+
+@import "../../styles"
+
+.container
+  height: 100vh
+  display: flex
+  align-items: center
+  justify-content: center
+
+  .card
+    width: 100%
+    border-radius: 8px
+    border: 1px solid $card-border-color !important
+
+  &-header
+    background-color: $background-color
+    padding: 10px
+
+  &-body
+    padding: 20px
+
+  .box
+    position: relative
+    top: 0
+    opacity: 1
+    float: left
+    padding: 30px
+    width: 100%
+    background: $white-color
+    transform: scale(1)
+    -webkit-transform: scale(1)
+    -ms-transform: scale(1)
+    z-index: 5
+    max-width: 500px
+
+  .card-header
+    color: $background-color
+    background: $primary-color
+    font-family: Proxima Nova
+    font-weight: 700
+    line-height: 30px
+    font-size: 20px

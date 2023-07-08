@@ -1,0 +1,134 @@
+@import "../../../styles"
+
+.card
+    border: 0
+    background-color: $white-color
+    border-radius: 8px
+
+.img-left
+    width: 90%
+    height: 280px
+    object-fit: cover
+
+.post-body
+    color: $font-color !important
+    font-family: Proxima Nova
+    font-size: 16px
+    font-weight: 400
+    line-height: 19px
+    letter-spacing: 0em
+    min-height: 0%
+    overflow: hidden
+
+a
+    color: $primary-color !important
+
+.align-bottom
+    vertical-align: bottom !important
+
+
+
+.date-text
+    font-family: Proxima Nova
+    font-size: 16px
+    font-weight: 400
+    line-height: 19px
+    letter-spacing: 0em
+    text-align: left
+
+.ml-1
+    margin-left: 0.25rem !important
+
+.ml-2
+    margin-left: 0.5rem !important
+
+.title
+    font-family: Proxima Nova
+    font-size: 35px
+    font-weight: 700
+    line-height: 43px
+    letter-spacing: 0em
+    text-align: left
+    color: $black-color
+    overflow: hidden
+    max-height: 90px
+
+.header-text
+    font-family: Proxima Nova
+    font-size: 12px
+    font-weight: 400
+    line-height: 15px
+    letter-spacing: 0em
+    text-align: left
+
+.h3
+    color: $font-color
+    font-family: Proxima Nova
+    font-size: 16px
+    font-weight: 700
+    line-height: 19px
+    letter-spacing: 0em
+    text-align: left
+
+.blog
+    padding-top: 1rem
+    padding-left: 1rem
+
+.pl-4
+    padding-left: 1rem
+
+hr
+    margin-top: 0
+    opacity: .1 !important
+
+.post-content
+    height: 0
+    overflow: hidden
+    transition: height 1s ease
+
+.show
+    height: auto
+
+.pointer
+    cursor: pointer !important
+
+.max-height-wrap
+    height: 110px !important
+    overflow: auto
+
+.fix-height
+    height: 110px !important
+
+@media only screen and (min-width: 280px) and (max-width: 1227px)
+    .text-container
+        display: block !important
+        position: staitc !important
+    .ml-2
+        margin-left: 0 !important
+
+@media only screen and (max-width:475px)
+    .post-container
+        display: block !important
+    .child-container
+        margin-top: 1rem !important
+        width: 100% !important
+    .img-left
+        width: 50%
+        height: 160px
+    .title
+        font-size: 25px
+        line-height: 30px
+
+@media only screen and (min-width: 475px) and (max-width: 1227px)
+    .img-left
+        height: 100% !important
+
+.child-container
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+.inn-blog-section-wrap
+    height: 100%
+    display: flex
+    flex-direction: column
+    justify-content: space-between

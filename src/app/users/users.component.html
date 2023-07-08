@@ -1,0 +1,58 @@
+<div class="container-fluid">
+    <div class="row header my-2 mx-2">
+        <div class="card p-0 user-wrapper">
+            <div class="card-body p-10 pb-1">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <div class="d-flex justify-content-start">
+                            <div>
+                                <mat-icon class="text-color" aria-label="Side nav toggle icon">people</mat-icon>
+                            </div>
+                            <div class="title-block">
+                                <span class="title">Users</span>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div>
+                        <mat-button-toggle-group name="fontStyle" aria-label="Font Style"
+                            class="toggle-group cus-toggle-wrap" [value]="isGridView">
+                            <mat-button-toggle [value]="false" (change)="isGridView = false; clearSearchbox()" selected>
+                                <mat-icon aria-label="Side nav toggle icon"
+                                    [color]="!isGridView ? 'icon-color' : ''">list</mat-icon>
+                            </mat-button-toggle>
+                            <mat-button-toggle [value]="true" (change)="isGridView = true; clearSearchbox()">
+                                <mat-icon aria-label="Side nav toggle icon"
+                                    [color]="isGridView ? 'icon-color' : ''">view_module</mat-icon>
+                            </mat-button-toggle>
+                        </mat-button-toggle-group>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid px-0">
+                <div class="row pl-4 g-0">
+                    <div class="col-md-6 col-sm-12 ">
+                        <p class="header-text px-3 description align-items-center">Total Users : {{userCount}}</p>
+                    </div>
+                    <div class="col-md-6 col-sm-12 text-end">
+                        <div
+                            class="my-2 mx-2 d-inline-flex search-box-wrap my-2 mx-2 d-inline-flex justify-content-end position-relative">
+                            <div class="search-icon-wrap " class="search-icon">
+                                <mat-icon matPrefix>search</mat-icon>
+                            </div>
+                            <input matInput placeholder="Search Entry" [(ngModel)]="searchText"
+                                class="search-place-holder" #input (keyup)="applyFilter($event)">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <ng-container *ngIf="isGridView; else listView">
+    <app-users-grid-view  (userCountEmit)="getUserCount($event)"></app-users-grid-view>
+    </ng-container>
+    <ng-template #listView>
+    <app-users-list-view *ngIf="!isGridView" (userCountEmit)="getUserCount($event)"></app-users-list-view>
+    </ng-template>
+</div>

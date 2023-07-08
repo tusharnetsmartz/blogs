@@ -1,0 +1,116 @@
+
+@import "../../styles"
+
+.sidenav-container
+  height: 100%
+  background: $background-color
+
+.sidenav
+  width: 200px
+
+  & .mat-toolbar
+    background: inherit
+    font-size: 18px
+    font-weight: 700
+
+.mat-toolbar.mat-primary
+  position: sticky
+  top: 0
+  z-index: 1
+
+.toolbar
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  height: 60px
+  display: flex
+  align-items: center
+  background-color: #f1f3f4
+  color: $font-color
+  font-weight: 600
+
+.spacer
+  flex: 1
+
+/****** Avatar **************/
+.rows
+  display: flex
+  align-items: center
+
+.circles
+  height: 40px
+  width: 40px
+  border-radius: 50%
+  background: $primary-color
+  border: 2px solid $primary-color
+  color: white
+  text-align: center
+  line-height: 40px
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  font-size: 18px
+
+  .rows &:not(:first-child)
+    margin-left: -18px
+
+  .rows &:nth-child(n+5)
+    display: none
+
+.toolbar-menu
+  font-family: Proxima Nova
+  font-size: 17px
+  font-weight: 700
+  letter-spacing: 0em
+  text-align: left
+  color: $toolbar-color
+
+.navbar
+  padding-left: 0 !important
+  z-index: 1041
+
+::ng-deep.mdc-list-item__primary-text
+  display: flex
+  align-items: center
+
+.font-color
+  color: $primary-color
+
+.menu-font-size
+  font-size: 14px
+  font-weight: 700
+
+.active
+  border-radius: 5.333px
+  height: 35px
+  background: $primary-color
+  color: $white-color
+
+
+::ng-deep.active
+  .font-color
+    color: $white-color !important
+
+.dropdown-menu
+  color: $white-color
+  right: 5%
+
+.p-10
+  padding: 10px
+
+.dropdown-item
+  text-align: center
+  display: inline-flex
+  justify-content: space-evenly
+  cursor: pointer
+
+.dropdown:hover>.dropdown-menu
+  display: block
+
+.dropdown>.dropdown-toggle:active
+  pointer-events: none
+
+.pointer-cursor
+  cursor: pointer

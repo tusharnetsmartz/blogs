@@ -1,0 +1,6 @@
+<ng-container *ngIf="isUserLoggedIn; else signIn">
+  <app-nav [blogPost]="blogPost" [username]="username"></app-nav>
+</ng-container>
+<ng-template #signIn>
+  <router-outlet></router-outlet>
+</ng-template>

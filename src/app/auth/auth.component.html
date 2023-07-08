@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="row justify-content-center box p-0">
+      <div class="col">
+        <div class="card border-0">
+          <div class="card-header">
+            Login
+          </div>
+          <div class="card-body">
+            <form [formGroup]="loginForm">
+              <div class="mb-3">
+                <label for="email" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="email" formControlName="email" placeholder="Enter email">
+                <div *ngIf="email.invalid && (email.dirty || email.touched)" class="text-danger">
+                    <div *ngIf="email.errors.required">Email is required.</div>
+                    <div *ngIf="email.errors.email">Invalid email format.</div>
+                  </div>
+              </div>
+              <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" formControlName="password" placeholder="Enter password" autocomplete="off">
+                <div *ngIf="password.invalid && (password.dirty || password.touched)" class="text-danger">
+                    <div *ngIf="password.errors.required">Password is required.</div>
+                  </div>
+              </div>
+              <button type="submit" class="btn btn-success" [disabled]="loginForm.invalid" (click)="login()">Login</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
